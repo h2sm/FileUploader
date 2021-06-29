@@ -1,9 +1,10 @@
 import java.io.*;
+import java.nio.file.Files;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "FileUploadServlet", urlPatterns = { "/fileuploadservlet" })
+@WebServlet(name = "FileUploadServlet", urlPatterns = {"/fileuploadservlet"})
 @MultipartConfig(
         fileSizeThreshold = 1024 * 1024 * 1, // 1 MB
         maxFileSize = 1024 * 1024 * 10,      // 10 MB
@@ -22,4 +23,7 @@ public class FileUploadServlet extends HttpServlet {
         response.getWriter().print("The file uploaded sucessfully.");
     }
 
+    private void createDirectory(){
+
+    }
 }
