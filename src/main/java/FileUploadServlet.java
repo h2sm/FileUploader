@@ -11,19 +11,17 @@ import javax.servlet.annotation.*;
         maxRequestSize = 1024 * 1024 * 100   // 100 MB
 )
 public class FileUploadServlet extends HttpServlet {
+    private String path = "D:\\tryfolder";
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        var theDir = new File(path);
+        if (!theDir.exists()) theDir.mkdirs();
         /* Receive file uploaded to the Servlet from the HTML5 form */
         Part filePart = request.getPart("file");
         String fileName = filePart.getSubmittedFileName();
         for (Part part : request.getParts()) {
-            part.write("C:\\upload\\" + fileName);
+            part.write(path + "\\" + fileName);
         }
         response.getWriter().print("The file uploaded sucessfully.");
-    }
-
-    private void createDirectory(){
-
     }
 }
