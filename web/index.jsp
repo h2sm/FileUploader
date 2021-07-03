@@ -12,8 +12,8 @@
 </head>
 <body>
 
-<form method="post" action="fileuploadservlet" enctype="multipart/form-data">
-  <input type="file" name="file" />
+<form method="post" action="/uploadservlet" enctype="multipart/form-data">
+  <input type="file" name="file" multiple/>
   <input type="submit" value="Upload" />
 </form>
 
