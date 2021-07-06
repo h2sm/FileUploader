@@ -27,7 +27,7 @@ dependencies {
 war{
     manifest{
         attributes(
-                'Main-Class':'SpringBootUploadFileApplication'
+                'Main-Class':'fileDownloader.SpringBootUploadFileApplication'
         )
     }
 }

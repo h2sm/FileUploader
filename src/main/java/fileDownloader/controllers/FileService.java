@@ -14,11 +14,11 @@ import java.nio.file.StandardCopyOption;
 
 @Service
 public class FileService {
-
-    @Value("${app.upload.dir:${user.home}}")
-    public String uploadDir;
+    public String uploadDir = "D:\\Downloaded_Files";
 
     public void uploadFile(MultipartFile file) {
+        File path = new File(uploadDir);
+        if (!path.exists()) path.mkdirs();
         try {
             Path copyLocation = Paths.get(uploadDir + File.separator + StringUtils.cleanPath(file.getOriginalFilename()));
             System.out.println(copyLocation + " COPYLOCATION");
