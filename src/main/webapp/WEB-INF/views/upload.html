@@ -2,16 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Загрузка файлов</title>
+    <title>Load files</title>
 </head>
 <body>
 
-<h1 align="center">Загрузка файлов</h1>
+<h1 align="center">Load Files </h1>
 <hr/>
 <div class="container" align="center">
     <form method="POST" th:action="@{/uploadFiles}" enctype="multipart/form-data">
         <input type="file" name="files" multiple/> <br/><br/>
-        <button type="submit">Загрузить</button>
+        <button type="submit">Load</button>
     </form>
 </div>
 <hr/>

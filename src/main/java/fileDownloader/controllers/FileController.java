@@ -17,14 +17,12 @@ public class FileController {
     FileService fileService;
 
     @GetMapping("/")
-    public  String index()
-    {
+    public String index() {
         return "upload";
     }
 
     @PostMapping("/uploadFile")
-    public String uploadFile(@RequestParam("file")MultipartFile file, RedirectAttributes redirectAttributes)
-    {
+    public String uploadFile(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
         fileService.uploadFile(file);
         redirectAttributes.addFlashAttribute("message", "You Successfully Uploaded" + file.getOriginalFilename() + "!");
 

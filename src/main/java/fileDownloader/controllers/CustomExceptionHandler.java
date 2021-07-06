@@ -13,7 +13,7 @@ public class CustomExceptionHandler {
     {
         ModelAndView mv = new ModelAndView();
         mv.addObject("message",exception.getMsg());
-        mv.setViewName("error");
+        mv.setViewName("/WEB-INF/views/error.html");
         return mv;
     }
 }
