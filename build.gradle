@@ -24,17 +24,4 @@ dependencies {
 
 
 }
-war{
-    manifest{
-        attributes(
-                'Main-Class':'fileDownloader.SpringBootUploadFileApplication'
-        )
-    }
-}
-//jar {
-//    manifest {
-//        attributes(
-//                'Main-Class': 'FileUploadServlet'
-//        )
-//    }
-//}
+
