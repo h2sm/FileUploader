@@ -18,7 +18,7 @@ public class FileController {
 
     @GetMapping("/")
     public String index() {
-        return "upload";
+        return "upload.html";
     }
 
     @PostMapping("/uploadFile")
