@@ -31,7 +31,7 @@ public class FileController {
         return "redirect:/";
     }
 
-    @PostMapping("/uploadFiles")
+    @PostMapping(value = "/uploadFiles", consumes = "multipart/form-data")
     public String uploadFiles(@RequestParam("files") MultipartFile[] files, RedirectAttributes redirectAttributes) {
 
         Arrays.asList(files)
